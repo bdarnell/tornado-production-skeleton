@@ -1,0 +1,10 @@
+# -*- conf -*-
+
+[program:chat]
+process_name = chat-%(process_num)s
+environment = PYTHONPATH="%(here)s/apps/tornado-production-skeleton/current"
+command = python -m chat.chatdemo
+	--port=%(process_num)s
+	--log_file_prefix=%(here)s/logs/%(program_name)s-%(process_num)s.log
+numprocs = 1
+numprocs_start = 8000
