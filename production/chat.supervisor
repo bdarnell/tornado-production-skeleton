@@ -6,5 +6,8 @@ environment = PYTHONPATH="%(here)s/apps/tornado-production-skeleton/current"
 command = python -m chat.chatdemo
 	--port=%(process_num)s
 	--log_file_prefix=%(here)s/logs/%(program_name)s-%(process_num)s.log
+# Increase numprocs to run multiple processes on different ports.
+# Note that the chat demo won't actually work in that configuration
+# because it assumes all listeners are in one process.
 numprocs = 1
 numprocs_start = 8000
