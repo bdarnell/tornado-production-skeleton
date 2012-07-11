@@ -38,7 +38,10 @@ repository you must run `git submodule update --init`, and re-run
 work (together with `.pth` files like `third_party/tornado.pth`).
 Simply point your `PYTHONPATH` at the directory containing
 `sitecustomize.py` and `third_party` will be added to the path
-automatically.
+automatically. The magic that makes this work is the site module,
+see http://docs.python.org/library/site.html. The site module is imported when
+python is initialized, it appends site-specific paths to the module search
+path.
 
 `production` directory
 ----------------------
