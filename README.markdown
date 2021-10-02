@@ -1,3 +1,10 @@
+Warning - Obsolete
+==================
+
+This repo dates back to 2011 and is no longer how I'd do things today (in 2021).
+See https://www.tornadoweb.org/en/stable/guide/running.html for better-maintained
+documentation on running Tornado in production. 
+
 Overview
 ========
 
